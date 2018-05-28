@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import HealthKit
 
 class WorkoutTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        if HKHealthStore.isHealthDataAvailable() {
+            print("Success!  Health Data Available!")
+        } else {
+            //HealthKit unavailable
+            print("HealthKit not available on this device.  User should visit their nearest Apple Store.")
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
