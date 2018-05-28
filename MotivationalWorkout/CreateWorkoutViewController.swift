@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import HealthKit
+import CoreMotion
 
 class CreateWorkoutViewController: UIViewController {
     
@@ -18,5 +20,13 @@ class CreateWorkoutViewController: UIViewController {
     
     @IBAction func toggleWorkout(_ sender: UIButton) {
     
+    }
+    
+    @IBAction func done(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        
     }
 }
