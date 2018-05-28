@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E90FC15320BB8C1400A82558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FC15220BB8C1400A82558 /* AppDelegate.swift */; };
-		E90FC15520BB8C1400A82558 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FC15420BB8C1400A82558 /* ViewController.swift */; };
+		E90FC15520BB8C1400A82558 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FC15420BB8C1400A82558 /* WorkoutTableViewController.swift */; };
 		E90FC15820BB8C1400A82558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90FC15620BB8C1400A82558 /* Main.storyboard */; };
 		E90FC15A20BB8C1600A82558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90FC15920BB8C1600A82558 /* Assets.xcassets */; };
 		E90FC15D20BB8C1600A82558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90FC15B20BB8C1600A82558 /* LaunchScreen.storyboard */; };
+		E90FC16520BB921B00A82558 /* CreateWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FC16420BB921B00A82558 /* CreateWorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E90FC14F20BB8C1400A82558 /* MotivationalWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotivationalWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90FC15220BB8C1400A82558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E90FC15420BB8C1400A82558 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E90FC15420BB8C1400A82558 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		E90FC15720BB8C1400A82558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E90FC15920BB8C1600A82558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E90FC15C20BB8C1600A82558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E90FC15E20BB8C1600A82558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E90FC16420BB921B00A82558 /* CreateWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				E90FC15220BB8C1400A82558 /* AppDelegate.swift */,
-				E90FC15420BB8C1400A82558 /* ViewController.swift */,
+				E90FC15420BB8C1400A82558 /* WorkoutTableViewController.swift */,
 				E90FC15620BB8C1400A82558 /* Main.storyboard */,
+				E90FC16420BB921B00A82558 /* CreateWorkoutViewController.swift */,
 				E90FC15920BB8C1600A82558 /* Assets.xcassets */,
 				E90FC15B20BB8C1600A82558 /* LaunchScreen.storyboard */,
 				E90FC15E20BB8C1600A82558 /* Info.plist */,
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E90FC15520BB8C1400A82558 /* ViewController.swift in Sources */,
+				E90FC15520BB8C1400A82558 /* WorkoutTableViewController.swift in Sources */,
+				E90FC16520BB921B00A82558 /* CreateWorkoutViewController.swift in Sources */,
 				E90FC15320BB8C1400A82558 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qzv-Cg-JUD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5nN-1P-fnB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--My Workouts-->
         <scene sceneID="7fv-1Z-SUH">
             <objects>
-                <tableViewController id="Qzv-Cg-JUD" sceneMemberID="viewController">
+                <tableViewController id="Qzv-Cg-JUD" customClass="WorkoutTableViewController" customModule="MotivationalWorkout" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hXT-xL-PJU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +54,119 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ED-Yh-xkk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999.20000000000005" y="159.67016491754123"/>
+        </scene>
+        <!--Create Workout View Controller-->
+        <scene sceneID="TX9-Mi-PUL">
+            <objects>
+                <viewController id="VQt-NJ-pQ7" customClass="CreateWorkoutViewController" customModule="MotivationalWorkout" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cej-yt-8UM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byz-iJ-XUA">
+                                <rect key="frame" x="130" y="76" width="114" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dTF-Ow-KGg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gri-GU-O3o">
+                                <rect key="frame" x="114" y="238" width="147" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Bgu-gc-i0X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDX-Er-u4H">
+                                <rect key="frame" x="128" y="375" width="118" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RwU-9t-8bl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loq-Ii-MPf">
+                                <rect key="frame" x="132" y="134" width="110" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="e8M-iU-gOy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 secs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0di-j0-f4l">
+                                <rect key="frame" x="162" y="426" width="51" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RUx-dq-ctl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpM-cc-dia">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.42380808615029464" green="0.42576264905008365" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2NK-3x-zuk"/>
+                                </constraints>
+                                <state key="normal" title="Start Workout">
+                                    <color key="titleColor" red="0.97495114502783775" green="1" blue="0.96187821364347825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleWorkout:" destination="VQt-NJ-pQ7" eventType="touchUpInside" id="XM8-iU-Gwf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKi-eg-yru">
+                                <rect key="frame" x="159" y="281" width="57" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eGX-5Q-Te5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Byz-iJ-XUA" firstAttribute="top" secondItem="FHf-wx-owa" secondAttribute="top" constant="56" id="2rJ-id-6O7"/>
+                            <constraint firstItem="FHf-wx-owa" firstAttribute="trailing" secondItem="Byz-iJ-XUA" secondAttribute="trailing" constant="131" id="9rR-S4-a7i"/>
+                            <constraint firstItem="Gri-GU-O3o" firstAttribute="top" secondItem="loq-Ii-MPf" secondAttribute="bottom" constant="83" id="Eay-st-I8t"/>
+                            <constraint firstItem="Gri-GU-O3o" firstAttribute="leading" secondItem="FHf-wx-owa" secondAttribute="leading" constant="114" id="Gcc-0Q-Zwj"/>
+                            <constraint firstItem="PpM-cc-dia" firstAttribute="leading" secondItem="FHf-wx-owa" secondAttribute="leading" id="HCK-FM-ybc"/>
+                            <constraint firstItem="cDX-Er-u4H" firstAttribute="top" secondItem="hKi-eg-yru" secondAttribute="bottom" constant="73" id="NIQ-oG-Pxk"/>
+                            <constraint firstItem="loq-Ii-MPf" firstAttribute="leading" secondItem="FHf-wx-owa" secondAttribute="leading" constant="132" id="PAm-qV-z3b"/>
+                            <constraint firstItem="0di-j0-f4l" firstAttribute="leading" secondItem="FHf-wx-owa" secondAttribute="leading" constant="162" id="S7e-rG-g8z"/>
+                            <constraint firstItem="PpM-cc-dia" firstAttribute="trailing" secondItem="FHf-wx-owa" secondAttribute="trailing" id="T8L-we-peu"/>
+                            <constraint firstItem="loq-Ii-MPf" firstAttribute="top" secondItem="Byz-iJ-XUA" secondAttribute="bottom" constant="37" id="dOe-h8-vvE"/>
+                            <constraint firstItem="FHf-wx-owa" firstAttribute="trailing" secondItem="0di-j0-f4l" secondAttribute="trailing" constant="162" id="fMO-V7-dWP"/>
+                            <constraint firstItem="FHf-wx-owa" firstAttribute="trailing" secondItem="hKi-eg-yru" secondAttribute="trailing" constant="159" id="fvf-1y-oi0"/>
+                            <constraint firstItem="hKi-eg-yru" firstAttribute="top" secondItem="Gri-GU-O3o" secondAttribute="bottom" constant="22" id="gwS-Iu-fIo"/>
+                            <constraint firstItem="FHf-wx-owa" firstAttribute="trailing" secondItem="Gri-GU-O3o" secondAttribute="trailing" constant="114" id="j5s-Ss-ymh"/>
+                            <constraint firstItem="FHf-wx-owa" firstAttribute="trailing" secondItem="loq-Ii-MPf" secondAttribute="trailing" constant="133" id="je6-x0-042"/>
+                            <constraint firstItem="Byz-iJ-XUA" firstAttribute="leading" secondItem="FHf-wx-owa" secondAttribute="leading" constant="130" id="kVh-J7-xFy"/>
+                            <constraint firstItem="hKi-eg-yru" firstAttribute="leading" secondItem="FHf-wx-owa" secondAttribute="leading" constant="159" id="lJ4-qq-89w"/>
+                            <constraint firstItem="cDX-Er-u4H" firstAttribute="leading" secondItem="FHf-wx-owa" secondAttribute="leading" constant="128" id="lP8-kb-S2Q"/>
+                            <constraint firstItem="FHf-wx-owa" firstAttribute="trailing" secondItem="cDX-Er-u4H" secondAttribute="trailing" constant="129" id="lmB-LZ-C3x"/>
+                            <constraint firstItem="0di-j0-f4l" firstAttribute="top" secondItem="cDX-Er-u4H" secondAttribute="bottom" constant="30" id="pSl-bv-L6t"/>
+                            <constraint firstItem="PpM-cc-dia" firstAttribute="bottom" secondItem="FHf-wx-owa" secondAttribute="bottom" id="qVc-hA-WVL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FHf-wx-owa"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressLabel" destination="hKi-eg-yru" id="zFB-nx-MFM"/>
+                        <outlet property="timeLabel" destination="0di-j0-f4l" id="McB-1v-F2N"/>
+                        <outlet property="toggleButton" destination="PpM-cc-dia" id="ryV-Rv-cXP"/>
+                        <outlet property="typeLabel" destination="loq-Ii-MPf" id="WOi-if-5EV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbz-ng-IZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.60000000000002" y="-543.77811094452773"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Xo-a1-mf0">
